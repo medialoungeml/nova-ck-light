@@ -43,6 +43,7 @@
 import { FormField, HandlesValidationErrors } from "laravel-nova";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import CKEditor from "@ckeditor/ckeditor5-vue";
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import ImageDisplay from "./internal/ImageDisplay.vue";
 
 export default {
@@ -95,6 +96,9 @@ export default {
             connectorPath: "/ckfinder/connector",
           },
         },
+        plugins: [
+          Alignment,
+        ],
       },
     };
   },
